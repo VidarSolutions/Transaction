@@ -1,9 +1,14 @@
 package Transaction
 import (
-	"github.com/vidarsolutions/appData"
+
 	"github.com/vidarsolutions/edKeys"
 
 )
+
+type Bytes32 [32]byte
+type Bytes64 [64]byte
+
+
 type Transaction struct{
 	TID			uint64							//Transaction Id  first 4 digits are the year
 	From		uint64							//BundleID as PublicKey where funds are coming from
