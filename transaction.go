@@ -32,9 +32,9 @@ type Tx struct{
 var(
 
 //setup map of transactions
-	Transactions		map[uint64]Transaction			 //Known Transactions
-	notValid  			make(map[uint64][]transaction)   //Map of potential transactions ID to node IDs indicating a bad transaction was approved. We do not track valid transaction in a map that is track in each bundle, but this is a way to track and vote a bad transaction be reversed and removed.
-	authorized  		make(map[uint64][]uint64)  		 //Map of bundle IDs to a list of Authorized Node IDs
+	Transactions		map[uint64]Transaction			//Known Transactions
+	notValid  			map[uint64][]transaction		//Map of potential transactions ID to node IDs indicating a bad transaction was approved. We do not track valid transaction in a map that is track in each bundle, but this is a way to track and vote a bad transaction be reversed and removed.
+	authorized  		map[uint64][]uint64				//Map of bundle IDs to a list of Authorized Node IDs
 
 )
 
